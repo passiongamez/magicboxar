@@ -5,7 +5,7 @@ using UnityEngine;
 public class Examinable : MonoBehaviour
 {
     [SerializeField] ExaminableManager examinableManager;
-
+    public float examineScaleOffset = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -22,5 +22,10 @@ public class Examinable : MonoBehaviour
     public void RequestExamine()
     {
         examinableManager.PerformExamine(this);
+    }
+
+    public void RequestUnexamine()
+    {
+        examinableManager.PerformUnexamine();
     }
 }
